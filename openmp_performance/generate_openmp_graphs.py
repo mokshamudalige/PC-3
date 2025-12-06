@@ -8,10 +8,7 @@ Generates:
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ============================================
-# INPUT YOUR OPENMP TEST RESULTS HERE
-# ============================================
-# Replace these with your actual measured values from running the OpenMP tests
+
 
 threads = [1, 2, 4, 8, 16]
 

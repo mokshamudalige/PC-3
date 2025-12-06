@@ -9,9 +9,7 @@ Generates:
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ============================================
-# INPUT YOUR TEST RESULTS FROM ALL IMPLEMENTATIONS
-# ============================================
+
 
 # Serial baseline
 serial_time = 0.050  # REPLACE WITH YOUR ACTUAL SERIAL TIME

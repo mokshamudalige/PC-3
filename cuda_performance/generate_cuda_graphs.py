@@ -9,10 +9,6 @@ Generates:
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ============================================
-# INPUT YOUR CUDA TEST RESULTS HERE
-# ============================================
-# Replace these with your actual measured values from CUDA tests
 
 # Block sizes tested
 block_sizes = ['8x8', '16x16', '32x32']
@@ -20,14 +16,12 @@ block_sizes_numeric = [8, 16, 32]  # For plotting
 
 # Example data - REPLACE with your actual execution times (in seconds)
 # Times for Basic Kernel
-basic_kernel_times = [0.0015, 0.0012, 0.0014]  # REPLACE WITH YOUR DATA
-
+basic_kernel_times = [0.0015, 0.0012, 0.0014]  
 # Times for Shared Memory Kernel
-shared_kernel_times = [0.0010, 0.0008, 0.0011]  # REPLACE WITH YOUR DATA
+shared_kernel_times = [0.0010, 0.0008, 0.0011]  
 
 # Serial baseline time (from your serial.c or OpenMP 1-thread test)
-serial_time = 0.050  # REPLACE WITH YOUR ACTUAL SERIAL TIME
-
+serial_time = 0.050  
 # Calculate speedup
 basic_speedup = [serial_time / t for t in basic_kernel_times]
 shared_speedup = [serial_time / t for t in shared_kernel_times]

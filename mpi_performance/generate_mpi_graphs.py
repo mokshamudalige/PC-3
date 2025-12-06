@@ -8,10 +8,7 @@ Generates:
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ============================================
-# INPUT YOUR MPI TEST RESULTS HERE
-# ============================================
-# Replace these with your actual measured values from running the MPI tests
+
 
 processes = [1, 2, 4, 8, 16]
 
