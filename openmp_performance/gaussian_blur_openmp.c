@@ -1,19 +1,3 @@
-/*
- * Gaussian Blur - OpenMP Parallel Implementation
- * 
- * This implementation parallelizes the Gaussian blur convolution operation
- * using OpenMP's shared-memory model with parallel for directives.
- * 
- * Parallelization Strategy:
- * - Uses #pragma omp parallel for to distribute outer loop iterations across threads
- * - Collapse(2) clause to parallelize both i and j loops for better load balancing
- * - Private variables ensure thread-safe computation
- * - Static scheduling for predictable, balanced workload distribution
- * 
- * Author: P.D.M.D.M.Mudalige
- * ID: IT23372344
- * Course: SE3082 - Parallel Computing
- */
 
 #include <stdio.h>
 #include <stdlib.h>
