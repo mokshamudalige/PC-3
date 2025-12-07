@@ -1,19 +1,4 @@
-/*
- * Gaussian Blur - MPI Parallel Implementation
- * 
- * This implementation parallelizes the Gaussian blur convolution operation
- * using MPI's distributed-memory model with domain decomposition.
- * 
- * Parallelization Strategy:
- * - Domain decomposition: image is divided into horizontal strips (rows)
- * - Each process handles a subset of rows
- * - Halo/ghost rows are exchanged between neighboring processes
- * - Master process (rank 0) distributes data and collects results
- * 
- * Author: P.D.M.D.M.Mudalige
- * ID: IT23372344
- * Course: SE3082 - Parallel Computing
- */
+
 
 #include <stdio.h>
 #include <stdlib.h>
