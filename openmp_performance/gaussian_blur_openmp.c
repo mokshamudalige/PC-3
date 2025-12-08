@@ -14,13 +14,7 @@ float kernel[3][3] = {
     {1/16.0, 2/16.0, 1/16.0}
 };
 
-/*
- * Serial Gaussian Blur (for comparison)
- * 
- * Parameters:
- *   input  - Input image array [HEIGHT][WIDTH]
- *   output - Output blurred image array [HEIGHT][WIDTH]
- */
+
 void gaussianBlurSerial(float input[HEIGHT][WIDTH], float output[HEIGHT][WIDTH]) {
     for (int i = 1; i < HEIGHT - 1; i++) {
         for (int j = 1; j < WIDTH - 1; j++) {
@@ -37,14 +31,7 @@ void gaussianBlurSerial(float input[HEIGHT][WIDTH], float output[HEIGHT][WIDTH])
     }
 }
 
-/*
- * Parallel Gaussian Blur using OpenMP
- * 
- * Parameters:
- *   input  - Input image array [HEIGHT][WIDTH]
- *   output - Output blurred image array [HEIGHT][WIDTH]
- *   num_threads - Number of OpenMP threads to use
- */
+
 void gaussianBlurParallel(float input[HEIGHT][WIDTH], float output[HEIGHT][WIDTH], int num_threads) {
     omp_set_num_threads(num_threads);
     
@@ -82,9 +69,7 @@ void initializeImage(float image[HEIGHT][WIDTH]) {
     }
 }
 
-/*
- * Print a small portion of the image for verification
- */
+
 void printImageSample(float image[HEIGHT][WIDTH], int sample_size) {
     printf("Sample output (%dx%d from center):\n", sample_size, sample_size);
     int start_i = HEIGHT/2 - sample_size/2;
